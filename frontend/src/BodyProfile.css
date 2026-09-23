@@ -1,0 +1,174 @@
+.body-profile-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 30px rgba(30, 50, 90, 0.08);
+  border: 1px solid #edf0f7;
+}
+
+.body-profile-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.body-profile-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eeeaff;
+  font-size: 24px;
+}
+
+.body-profile-heading h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.body-profile-heading p {
+  margin: 5px 0 0;
+  color: #77839b;
+}
+
+.body-profile-warning {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 9px;
+  background: #fff4df;
+  color: #8a5a00;
+  font-size: 14px;
+}
+
+.body-profile-content {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 30px;
+}
+
+.body-photo-section {
+  text-align: center;
+}
+
+.body-photo {
+  width: 220px;
+  height: 280px;
+  margin: 0 auto 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #f1f4f9;
+  border: 2px dashed #cdd5e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body-photo-section input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px;
+  border: 1px solid #d9dfeb;
+  border-radius: 8px;
+  outline: none;
+}
+
+.body-photo-section small {
+  display: block;
+  margin-top: 7px;
+  color: #8993a7;
+}
+
+.body-measurements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-content: start;
+}
+
+.measurement-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.measurement-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4d5870;
+}
+
+.measurement-field input {
+  padding: 13px;
+  border: 1px solid #d9dfeb;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.measurement-field input:focus,
+.body-photo-section input:focus {
+  border-color: #5d78ee;
+  box-shadow: 0 0 0 3px rgba(93, 120, 238, 0.1);
+}
+
+.save-body-profile {
+  grid-column: 1 / -1;
+  border: none;
+  padding: 14px;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #3279ed, #8757e9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-body-profile:hover {
+  opacity: 0.92;
+}
+
+.save-body-profile:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.body-profile-success {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 9px 15px;
+  border-radius: 20px;
+  background: #e5f8ec;
+  color: #168044;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .body-profile-content {
+    grid-template-columns: 1fr;
+  }
+
+  .body-photo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .body-measurements {
+    grid-template-columns: 1fr;
+  }
+
+  .save-body-profile {
+    grid-column: auto;
+  }
+}
