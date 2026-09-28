@@ -1,0 +1,6 @@
+_BASE_: "mask_rcnn_R_50_FPN_3x_gn.yaml"
+MODEL:
+  WEIGHTS: ""
+  MASK_ON: True
+  BACKBONE:
+    FREEZE_AT: 0

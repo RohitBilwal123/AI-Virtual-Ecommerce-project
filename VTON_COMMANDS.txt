@@ -1,0 +1,97 @@
+AI VIRTUAL E-COMMERCE — VTON COMMAND NOTES
+===========================================
+
+PROJECT PATH
+------------
+C:\Users\rohit\Projects\AI-Virtual-Ecommerce
+
+VTON PATH
+---------
+C:\Users\rohit\Projects\AI-Virtual-Ecommerce\ai-service\VTON\VTON_Model_(CPU)
+
+
+OPEN VTON PROJECT
+-----------------
+cd "C:\Users\rohit\Projects\AI-Virtual-Ecommerce\ai-service\VTON\VTON_Model_(CPU)"
+
+
+ACTIVATE VTON ENVIRONMENT
+-------------------------
+.\vton-env\Scripts\Activate.ps1
+
+
+CHECK PYTHON VERSIONS
+---------------------
+py -0p
+
+
+CHECK PYTORCH
+-------------
+python -c "import torch; print(torch.__version__); print('CPU:', torch.get_num_threads()); print('PyTorch CPU OK')"
+
+
+CHECK MODEL
+-----------
+Get-ChildItem .\Model
+
+
+CHECK VAE
+---------
+Get-ChildItem .\Model\vae
+
+
+CHECK UNET ENCODER
+------------------
+Get-ChildItem .\Model\unet_encoder
+
+
+CHECK DENSEPOSE
+---------------
+Get-ChildItem .\ckpt\densepose
+
+
+MODEL STRUCTURE
+---------------
+Model/
+    unet/
+    unet_encoder/
+    vae/
+    image_encoder/
+    text_encoder/
+    text_encoder_2/
+    tokenizer/
+    tokenizer_2/
+    scheduler/
+
+ckpt/
+    densepose/
+        model_final_162be9.pkl
+
+
+PYTORCH CPU INSTALLATION
+------------------------
+python -m pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cpu
+
+
+IMPORTANT
+---------
+Do NOT delete model files.
+Do NOT download the model again.
+Do NOT run app.py until dependencies are verified.
+
+
+CURRENT STATUS
+--------------
+Python 3.10 installed
+VTON virtual environment created
+PyTorch 2.0.1 CPU installed
+VAE downloaded
+UNet Encoder downloaded
+DensePose downloaded
+Model files moved to correct folders
+
+NEXT STEP
+---------
+Verify PyTorch:
+
+python -c "import torch; print(torch.__version__); print('CPU:', torch.get_num_threads()); print('PyTorch CPU OK')"

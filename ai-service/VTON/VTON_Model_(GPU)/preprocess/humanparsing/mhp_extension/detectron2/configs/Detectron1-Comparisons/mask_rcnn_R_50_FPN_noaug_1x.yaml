@@ -1,0 +1,17 @@
+_BASE_: "../Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+  RPN:
+    SMOOTH_L1_BETA: 0.1111
+  ROI_BOX_HEAD:
+    SMOOTH_L1_BETA: 1.0
+    POOLER_SAMPLING_RATIO: 2
+    POOLER_TYPE: "ROIAlign"
+  ROI_MASK_HEAD:
+    POOLER_SAMPLING_RATIO: 2
+    POOLER_TYPE: "ROIAlign"
+INPUT:
+  MIN_SIZE_TRAIN: (800, )

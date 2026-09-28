@@ -1,0 +1,17 @@
+_BASE_: Base-PointRend-RCNN-FPN.yaml
+MODEL:
+  WEIGHTS: detectron2://ImageNetPretrained/MSRA/R-50.pkl
+  MASK_ON: true
+  RESNETS:
+    DEPTH: 50
+  ROI_HEADS:
+    NUM_CLASSES: 1
+  POINT_HEAD:
+    NUM_CLASSES: 1
+SOLVER:
+  STEPS: (210000, 250000)
+  MAX_ITER: 270000
+  IMS_PER_BATCH: 1
+DATASETS:
+  TRAIN: ("CIHP_train",)
+  TEST: ("CIHP_val",)
